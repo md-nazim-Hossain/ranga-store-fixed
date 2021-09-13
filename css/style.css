@@ -82,22 +82,40 @@ body {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .search-field,.search-box{
+    width: 98%;
+    margin:10px;
+  }
+  .search-button{
+    width: 20%;
+  }
+  #my-cart{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+  }
   .cart {
-    width: 300px;
+    width: 30%;
     /* border: 1px solid green; */
-    padding: 10px;
+    padding: 5px;
     box-shadow: 10px 10px 20px gray;
     border-radius: 5px;
-    margin-right: 30px;
+    margin-right: 10px;
     position: fixed;
   }
   .cart-main {
-    padding-right: 10px;
+    padding-right: 5px;
   }
 }
 @media only screen and (max-width: 468px) {
   #all-products {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+  }
+  .search-field,.search-box{
+    width: 98%;
+    margin:10px;
+  }
+  .search-button{
+    width: 25%;
   }
 }
