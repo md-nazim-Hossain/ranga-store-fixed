@@ -10,17 +10,24 @@ const showProducts = (products) => {
   const allProducts = products.map((pd) => pd);
   for (const product of allProducts) {
     const image = product.image;
+    console.log(product)
     const div = document.createElement("div");
     div.classList.add("col-md-12");
     div.innerHTML = `<div class="single-product">
       <div>
     <img class="product-image" src=${image}></img>
       </div>
-      <h3>${product.title}</h3>
-      <p>Category: ${product.category}</p>
-      <h2>Price: $ ${product.price}</h2>
-      <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
-      <button onclick="displayDetails(${product.id})" id="details-btn" class="btn btn-danger">Details</button></div>
+        <h3>${product.title}</h3>
+        <p>Category: ${product.category}</p>
+        <h6>Rating Count: ${product.rating.count}</h6>
+        <h6>Average Rating: ${product.rating.rate}</h6>
+        <h2>Price: $ ${product.price}</h2>
+ 
+        <div class="btn-footer">
+          <button onclick="addToCart(${product.id},${product.price})" id="addToCart-btn" class="buy-now btn btn-success">add to cart</button>
+          <button onclick="displayDetails(${product.id})" id="details-btn" class="btn btn-danger">Details</button>
+        </div>
+      </div>
       `;
     document.getElementById("all-products").appendChild(div);
   }
